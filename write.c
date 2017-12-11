@@ -38,7 +38,6 @@ int main(){
 		mem->position %= 4096;
 		mem->array[mem->position] = current;
 		current++;
-		if(mem->position % 1 == 0){ sleep(1); }
 	}	
 
 	munmap(mem, sizeof(struct circular_buffer));
